@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        /* margin: 0;
+        padding: 0; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* height: 100vh; */
+      }
+
+      form {
+        background: #ffffff;
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 400px;
+      }
+
+      h1 {
+        text-align: center;
+        color: #333333;
+      }
+
+      label {
+        display: block;
+        margin-top: 10px;
+        font-size: 14px;
+        color: #555555;
+      }
+
+      input,
+      textarea,
+      select {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border: 1px solid #cccccc;
+        border-radius: 4px;
+        font-size: 14px;
+      }
+
+      input[type="radio"] {
+        width: auto;
+        margin-right: 10px;
+      }
+
+      button {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        color: #ffffff;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        margin-top: 20px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+      }
+
+      .form-group.inline {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .form-group.inline label {
+        margin: 0;
+        font-size: 14px;
+      }
+
+      .form-group.inline input {
+        width: auto;
+        margin-left: 10px;
+      }
+    </style>
+   
+  </head>
+  <body>
+    <form action="register" method="post" >
+      <h1>Register</h1>
+
+      <label for="Fname">First Name:</label>
+      <input type="text" id="Fname" name="Fname" required />
+
+      <label for="Lname">Last Name:</label>
+      <input type="text" id="Lname" name="Lname" required />
+
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" required />
+
+      <div class="form-group">
+        <label>Gender:</label>
+        <label><input type="radio" id="male" name="gender" value="male" checked /> Male</label>
+        <label><input type="radio" id="female" name="gender" value="female" /> Female</label>
+        <label><input type="radio" id="other" name="gender" value="other" /> Other</label>
+      </div>
+
+      <label for="phone">Phone Number:</label>
+      <input type="number" pattern="\d{10}" name="phone" required />
+
+      <label for="address">Address:</label>
+      <textarea id="address" name="address" rows="4" cols="50" required></textarea>
+
+      <label for="blood-group">Blood Group:</label>
+      <select name="Blood Group" id="blood-group" required>
+        <option value="A+">A+</option>
+        <option value="A-">A-</option>
+        <option value="B+">B+</option>
+        <option value="B-">B-</option>
+        <option value="O+">O+</option>
+        <option value="O-">O-</option>
+        <option value="AB+">AB+</option>
+        <option value="AB-">AB-</option>
+      </select>
+
+      <label>Are you Diabetic?</label>
+      <label><input type="radio" name="diabetic" value="yes" required /> Yes</label>
+      <label><input type="radio" name="diabetic" value="no" required /> No</label>
+
+      <label>Do you have Allergy?</label>
+      <label><input type="radio" name="allergy" value="yes" required /> Yes</label>
+      <label><input type="radio" name="allergy" value="no" required /> No</label>
+
+      <label for="hieght">Height:</label>
+      <input type="text" id="hieght" name="hieght" />
+
+      <label for="weight">Weight:</label>
+      <input type="text" id="weight" name="weight" />
+
+      <div class="mb-3">
+        <label for="username" class="form-label">Username:</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          class="form-control"
+          placeholder="Enter your username"
+          required
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="password" class="form-label">Password:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          class="form-control"
+          placeholder="Enter your password"
+          required
+        />
+      </div>
+
+      
+      <div class="mb-3">
+        <label for="confirm-password" class="form-label">Confirm Password:</label>
+        <input
+          type="password"
+          id="confirm-password"
+          name="confirm-password"
+          class="form-control"
+          placeholder="Confirm your password"
+          required
+        />
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
