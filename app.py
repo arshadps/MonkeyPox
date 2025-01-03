@@ -9,7 +9,7 @@ app.secret_key = 'asd'
 def home():
     return render_template("guest/index.html ")
 
-
+#change
 
 @app.route("/login",methods=["GET","POST"])
 def login():
